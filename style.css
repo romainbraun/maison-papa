@@ -30,8 +30,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     overflow: hidden;
+    background-image: url('https://picsum.photos/1200/800?random=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero::before {
@@ -41,8 +44,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(22, 33, 62, 0.6) 50%, rgba(15, 52, 96, 0.7) 100%);
+    z-index: 2;
 }
 
 .hero::after {
@@ -52,14 +55,14 @@ body {
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(transparent, rgba(250, 251, 252, 0.1));
-    z-index: 1;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    z-index: 2;
 }
 
 .hero-content {
     text-align: center;
     color: white;
-    z-index: 2;
+    z-index: 3;
     position: relative;
     animation: fadeInUp 1.5s ease-out;
 }
@@ -98,19 +101,11 @@ body {
 }
 
 .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+    display: none; /* Hidden since we're using CSS background-image instead */
 }
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: zoomIn 1.5s ease-out;
+    display: none;
 }
 
 /* Animations */
